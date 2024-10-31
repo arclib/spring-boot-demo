@@ -31,9 +31,21 @@
             <scope>test</scope>
         </dependency>
 
+<!--idea 自带的设置就可以-->
+<!--
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+-->
+
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>common-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>common-operation-log-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 

@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>common-core</module>
+        <module>common-operation-log-spring-boot-starter</module>
     </modules>
 
     <properties>

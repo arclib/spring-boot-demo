@@ -9,14 +9,3 @@ server:
       enabled: true
       # 强制使用指定的字符编码
       force: true
-
-spring:
-  devtools:
-    restart:
-      # 开启开发工具包的自动重启功能，当代码发生变化时，应用会自动重启
-      enabled: true
-      # 指定额外的路径用于监控变化以触发重启，这里指定了src/main/java目录
-      additional-paths: src/main/java
-      # 排除不需要监控的路径，这里排除了static和public目录下的文件变化
-#      exclude: static/**,public/**
-
