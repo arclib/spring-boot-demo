@@ -1,9 +1,6 @@
 package com.example.demo.common.core.utils;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.SneakyThrows;
 /**
  * JSON 工具类
@@ -14,14 +11,7 @@ import lombok.SneakyThrows;
  */
 public class JsonUtils {
 
-    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
-
-    static {
-        OBJECT_MAPPER.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        OBJECT_MAPPER.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-        // 解决 LocalDateTime 的序列化问题
-         OBJECT_MAPPER.registerModules(new JavaTimeModule());
-    }
+    private static ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     /**
      *  将对象转换为 JSON 字符串
@@ -34,4 +24,12 @@ public class JsonUtils {
        return OBJECT_MAPPER.writeValueAsString(obj);
     }
 
+    /**
+     * 初始化：统一使用 Spring Boot 个性化配置的 ObjectMapper
+     *
+     * @param objectMapper
+     */
+    public static void init(ObjectMapper objectMapper) {
+        OBJECT_MAPPER = objectMapper;
+    }
 }

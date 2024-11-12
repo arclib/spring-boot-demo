@@ -1,3 +1,7 @@
+spring:
+  profiles:
+    active: dev # 默认激活 dev 本地开发环境
+
 server:
   # 设置服务器端口为8080
   port: 8080
@@ -9,3 +13,12 @@ server:
       enabled: true
       # 强制使用指定的字符编码
       force: true
+mybatis:
+  # MyBatis xml 配置文件路径
+  mapper-locations: classpath:/mapper/**/*.xml
+
+
+# mybatis 开启日志
+logging:
+  level:
+    com.example.demo.auth.dao: debug

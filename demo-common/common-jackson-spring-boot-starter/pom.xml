@@ -7,9 +7,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>common-operation-log-spring-boot-starter</artifactId>
+    <artifactId>common-jackson-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
-
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,10 +19,9 @@
             <groupId>com.example</groupId>
             <artifactId>common-core</artifactId>
         </dependency>
-        <!-- AOP 切面 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
     </dependencies>
 </project>
