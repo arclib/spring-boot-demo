@@ -2,10 +2,7 @@ spring:
   ## 热部署配置 本地开发配置
   devtools:
     restart:
-      # 开启开发工具包的自动重启功能，当代码发生变化时，应用会自动重启
       enabled: true
-      additional-paths: src/main/java #指定热部署的目录
-      exclude: test/**  #排除指定目录
   ## 数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver # 指定数据库驱动类
@@ -43,3 +40,8 @@ spring:
         wall: # 防火墙
           config:
             multi-statement-allow: true
+  #2spring security配置
+#  security:
+#    user:
+#      name: admin
+#      password: admin

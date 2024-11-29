@@ -13,6 +13,8 @@ server:
       enabled: true
       # 强制使用指定的字符编码
       force: true
+
+
 mybatis:
   # MyBatis xml 配置文件路径
   mapper-locations: classpath:/mapper/**/*.xml

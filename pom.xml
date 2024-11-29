@@ -83,7 +83,30 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
             </dependency>
+            <!--分页插件-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.4.1</version>
+            </dependency>
+            <!--mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.5.1</version>
+            </dependency>
+            <!--加密配置文件中的敏感信息-->
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>3.0.4</version>
+            </dependency>
 
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>common-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.example</groupId>
@@ -101,6 +124,13 @@
                 <artifactId>common-jackson-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>common-dao</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -108,28 +138,28 @@
     <build>
         <!-- 统一插件管理 -->
         <pluginManagement>
-            <plugins>
-                <!-- 代码生成器 -->
-                <plugin>
-                    <groupId>org.mybatis.generator</groupId>
-                    <artifactId>mybatis-generator-maven-plugin</artifactId>
-                    <version>${mybatis-generator-maven-plugin.version}</version>
-                    <configuration>
-                        <!-- 允许移动生成的文件 -->
-                        <verbose>true</verbose>
-                        <!-- 允许覆盖生成的文件 -->
-                        <overwrite>true</overwrite>
-                    </configuration>
-                    <!-- 此插件需要连接数据库，所以需要依赖 MySQL 驱动 -->
-                    <dependencies>
-                        <dependency>
-                            <groupId>mysql</groupId>
-                            <artifactId>mysql-connector-java</artifactId>
-                            <version>${mysql-connector-java.version}</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
-            </plugins>
+<!--            <plugins>-->
+<!--                &lt;!&ndash; 代码生成器 &ndash;&gt;-->
+<!--                <plugin>-->
+<!--                    <groupId>org.mybatis.generator</groupId>-->
+<!--                    <artifactId>mybatis-generator-maven-plugin</artifactId>-->
+<!--                    <version>${mybatis-generator-maven-plugin.version}</version>-->
+<!--                    <configuration>-->
+<!--                        &lt;!&ndash; 允许移动生成的文件 &ndash;&gt;-->
+<!--                        <verbose>true</verbose>-->
+<!--                        &lt;!&ndash; 允许覆盖生成的文件 &ndash;&gt;-->
+<!--                        <overwrite>true</overwrite>-->
+<!--                    </configuration>-->
+<!--                    &lt;!&ndash; 此插件需要连接数据库，所以需要依赖 MySQL 驱动 &ndash;&gt;-->
+<!--                    <dependencies>-->
+<!--                        <dependency>-->
+<!--                            <groupId>mysql</groupId>-->
+<!--                            <artifactId>mysql-connector-java</artifactId>-->
+<!--                            <version>${mysql-connector-java.version}</version>-->
+<!--                        </dependency>-->
+<!--                    </dependencies>-->
+<!--                </plugin>-->
+<!--            </plugins>-->
         </pluginManagement>
     </build>
 </project>
